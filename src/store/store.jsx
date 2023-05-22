@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 // import addToCourtSlice from '../features/products/addToCourtSlice';
-import  addToCourtSlice from './../features/addToCourtSlice';
+import addToCourtSlice from './../features/addToCourtSlice';
 
 
 

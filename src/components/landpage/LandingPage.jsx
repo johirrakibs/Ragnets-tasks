@@ -9,7 +9,6 @@ const LandingPage = () => {
   console.log(id)
 
   useEffect(() => {
-    // Fetch product data from the Fake Store API
     axios.get('https://fakestoreapi.com/products')
       .then((response) => {
         setProducts(response.data);
@@ -23,24 +22,22 @@ const LandingPage = () => {
     <div className='pro-container'>
       <div className='por-contain'>
         <h2>Products</h2>
+        <div className="product-grid ">
+          {products.map((product) => (
+            <div className="product-card" key={product.id}>
+              <img src={product.image} alt={product.title} />
+              <h3>{product.title}</h3>
+              <p>Price: {product.price}</p>
 
-    
-          <div className="product-grid ">
-            {products.map((product) => (
-              <div className="product-card" key={product.id}>
-                <img src={product.image} alt={product.title} />
-                <h3>{product.title}</h3>
-                <p>Price: {product.price}</p>
-                <h3>{product.category}</h3>
-                <div className='pro-btn'>
+              <div className='pro-btn'>
                 <div className='pro-buy-btn'><button ><Link className='details-btn' to={`/details/${product.id}`}>Details</Link></button></div>
                 <div className='pro-buy-btn'><button ><Link className='details-btn' to={`/buynow/${product.id}`}>Buy Now</Link></button></div>
-                </div>
-
-
               </div>
-            ))}
-          </div>
+
+
+            </div>
+          ))}
+        </div>
 
 
       </div>

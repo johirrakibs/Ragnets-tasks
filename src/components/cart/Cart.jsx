@@ -1,20 +1,15 @@
 import { useState, useEffect } from 'react';
 import './cart.css';
 import Header from '../../common/header/Header';
-import Footer from '../../common/footer/Footer';
+import Navbar from '../../common/navbar/Navbar';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTrash, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { resetInitialState, incrementQuantity, delteItem} from '../../features/addToCourtSlice';
-import Navbar from '../../common/navbar/Navbar';
+import { resetInitialState, incrementQuantity, decrementQuantity, delteItem } from '../../features/addToCourtSlice';
+import Footer from '../../common/footer/Footer';
 
-// import {
-//   resetInitialState,
-//   incrementQuantity,
-//   incrementQuantity,
-//   delteItem,
-// } from '../../../features/addToCourtSlice';
 
 const Cart = () => {
   const [isConfirmed, setIsConfirmed] = useState(false);
@@ -22,13 +17,12 @@ const Cart = () => {
   const { totalProductPrice, cart } = useSelector(state => state.cart);
   const dispatch = useDispatch();
 
-  useEffect(() => {}, [isConfirmed]);
+  useEffect(() => { }, [isConfirmed]);
 
   const handleOrderConfirm = () => {
-    // Perform any further actions, such as sending order data to the server
+
     const data = localStorage.getItem('purchaseHistory');
     console.log('previous: ', JSON.parse(data));
-
     const previousData = JSON.parse(data) ? JSON.parse(data) : [];
     const totalPreviousData = [...cart, ...previousData];
     console.log('totalPreviousData: ', totalPreviousData);
@@ -68,9 +62,12 @@ const Cart = () => {
                     <img className='cart-image' src={item.image} />
 
                     <h1 className='cart-product-title'> {item.title} </h1>
-                    <h3> {item.quantity} </h3>
+                    <h3 className='cart-unit'> {item.quantity} </h3>
+
+
 
                     <div className='cart-quantity'>
+                      <h1 className='cart-quantity-title'>Quantity :</h1>
                       <button
                         className='cart-quantity-btn'
                         onClick={() => dispatch(decrementQuantity(item))}>
@@ -84,8 +81,10 @@ const Cart = () => {
                         +
                       </button>
                     </div>
-
-                    <h3> {item.price} TK</h3>
+                    <div className='cart-quantity'>
+                      <h1 className='cart-quantity-title'>Price :</h1>
+                      <h3> {item.price} TK</h3>
+                    </div>
                     <div>
                       <button
                         className='cart-quantity-btn'

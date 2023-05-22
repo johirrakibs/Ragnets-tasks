@@ -1,61 +1,86 @@
-.details-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-  
-  }
-  
+.details-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+}
+
+.details-flex {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 8px;
+
+}
+
+.details-flex:hover {
+  border-color: #c92127;
+  box-shadow: 0 15px 35px #0000001a;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.pro-title {
+  font-size: x-large;
+  font-weight: lighter;
+  font-family: fantasy;
+}
+
+.pro-price {
+  font-size: x-large;
+  font-weight: lighter;
+  font-family: fantasy;
+}
+
+.pro-description {
+  text-align: center;
+  font-size: medium;
+  font-weight: 200;
+  word-wrap: normal;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.details-btn button {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: black;
+  color: white;
+  padding: 8px;
+  border-radius: 80px;
+
+}
+
+.details-btn :hover {
+  color: #ef06e3;
+  background-color: #cebbbc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+@media (min-width:300px) and (max-width:767px) {
+
   .details-flex {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 5px;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    gap: 8px;
-   
+
+    width: 97% !important;
+
   }
-  .details-card {
-  
-  }
-  .details-flex:hover {
-    border-color: #c92127;
-    box-shadow: 0 15px 35px #0000001a;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  
-  img {
-    width: 200px;
-    height: 200px;
-    object-fit: contain;
-    margin: 0 auto;
-  }
-  
-  .details-btn button{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    background-color: black;
-    color: yellow;
-    padding: 8px;
-    border-radius: 80px;
-   
-  }
-  .details-btn :hover{
-   color: #ef06e3;
-   background-color: #cebbbc;
-   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-   
-  }
-  
+}

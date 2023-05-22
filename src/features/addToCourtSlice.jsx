@@ -6,7 +6,7 @@ const initialState = {
   totalProductPrice: 0,
 };
 
- const addToCourtSlice = createSlice({
+const addToCourtSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {

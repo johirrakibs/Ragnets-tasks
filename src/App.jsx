@@ -1,5 +1,4 @@
 import { Route, Routes } from 'react-router-dom';
-
 import LoginPage from './components/login/Login';
 import Home from './pages/Home';
 import Details from './components/details/Details';
@@ -9,6 +8,7 @@ import ProtectedRoutes from './ProtectedRoutes';
 import PurchaseHistory from './components/purchaseHistory/PurchaseHistory';
 import Buynow from './components/buynow/Buynow';
 import RegistrationPage from './components/registration/Registration';
+import LogoutPage from './components/logout/Logout';
 
 
 
@@ -20,6 +20,7 @@ function App() {
         <Route path='/home' element={<Home />} />,
         <Route path='/registration' element={<RegistrationPage />} />,
         <Route path='/login' element={<LoginPage />} />,
+        <Route path='/logout' element={<LogoutPage />} />,
         <Route path='/details/:id' element={<Details />} />,
         <Route path='/buynow/:id' element={<Buynow />} />,
         <Route element={<ProtectedRoutes />}>

@@ -5,10 +5,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faList } from '@fortawesome/free-solid-svg-icons';
 
 
- const Navbar = () => {
+const Navbar = () => {
   return (
     <>
-    <nav className="nav">
+      <nav className="nav">
         <div className="nav-container">
           <div className="nav-contain">
             <div className="col-12">
@@ -22,7 +22,7 @@ import { faList } from '@fortawesome/free-solid-svg-icons';
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                    <FontAwesomeIcon icon={faList} />
+                      <FontAwesomeIcon icon={faList} />
                       <span className="">
                         Shop Categories
                       </span>
@@ -33,22 +33,22 @@ import { faList } from '@fortawesome/free-solid-svg-icons';
                     >
                       <li>
                         <Link className="dropdown" to="">
-                        men's clothing
+                          men's clothing
                         </Link>
                       </li>
                       <li>
                         <Link className="dropdown" to="">
-                        women's clothing
+                          women's clothing
                         </Link>
                       </li>
                       <li>
                         <Link className="dropdown" to="">
-                        jewelery
+                          jewelery
                         </Link>
                       </li>
                       <li>
                         <Link className="dropdown" to="">
-                        electronics 
+                          electronics
                         </Link>
                       </li>
                     </ul>

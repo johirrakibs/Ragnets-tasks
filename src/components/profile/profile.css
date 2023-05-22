@@ -1,0 +1,45 @@
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .profile-input {
+    display: flex;
+    margin-bottom: 20px;
+  }
+  
+  .profile-input label {
+    width: 150px;
+    font-weight: bold;
+  }
+  
+  .profile-input input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .profile-btn {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .profile-btn button {
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .success-message {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #dff0d8;
+    border: 1px solid #d0e9c6;
+    border-radius: 4px;
+    color: #3c763d;
+  }
+  

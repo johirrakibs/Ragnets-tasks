@@ -5,7 +5,7 @@ import {
   faUserPlus,
   faUser,
   faCartShopping,
-  faHeart,
+  faUserMinus,
   faMagnifyingGlass,
   faShoppingBag,
 } from '@fortawesome/free-solid-svg-icons';
@@ -47,10 +47,7 @@ const Header = () => {
           </button>
         </div>
         <div className='header-icons'>
-          <Link to='/wishlist-product' className='header-icon'>
-            <FontAwesomeIcon icon={faHeart} />
-            <span>Favourite Wishlist</span>
-          </Link>
+
           <Link to='/profile' className='header-icon'>
             <FontAwesomeIcon icon={faUser} />
             <span>My Account</span>
@@ -66,6 +63,10 @@ const Header = () => {
           <Link to='/login' className='header-icon'>
             <FontAwesomeIcon icon={faUserPlus} />
             <span>Login</span>
+          </Link>
+          <Link to='/logout' className='header-icon'>
+            <FontAwesomeIcon icon={faUserMinus} />
+            <span>Log Out</span>
           </Link>
         </div>
       </div>

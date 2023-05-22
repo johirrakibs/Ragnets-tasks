@@ -1,52 +1,51 @@
 import React, { useState } from 'react';
+import './profile.css';
 
 const ProfilePage = () => {
-  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
+  const [password, setPassword] = useState('');
+  const [newEmail, setNewEmail] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
-  // Fetch user details from the server or localStorage and update the state
-
-  const handleUpdateProfile = e => {
+  const handleUpdateProfile = (e) => {
     e.preventDefault();
-
-    // Perform update profile logic here
-
-    // Redirect to the profile page or perform any other necessary actions
-    window.location.href = '/profile';
+    if (!newEmail || !newPassword) {
+      setSuccessMessage('Please fill in all fields');
+      return;
+    }
+    setEmail(newEmail);
+    setPassword(newPassword);
+    setNewEmail('');
+    setNewPassword('');
+    setSuccessMessage('Profile updated successfully');
   };
 
   return (
-    <div>
+    <div className="profile-container">
       <h2>Profile Page</h2>
       <form onSubmit={handleUpdateProfile}>
-        <div>
-          <label>Name:</label>
+      
+        <div className="profile-input">
+          <label>New Email:</label>
           <input
             type="text"
-            value={name}
-            onChange={e => setName(e.target.value)}
+            value={newEmail}
+            onChange={(e) => setNewEmail(e.target.value)}
           />
         </div>
-        <div>
-          <label>Email:</label>
+        <div className="profile-input">
+          <label>New Password:</label>
           <input
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
+            type="password"
+            value={newPassword}
+            onChange={(e) => setNewPassword(e.target.value)}
           />
         </div>
-        <div>
-          <label>Phone Number:</label>
-          <input
-            type="tel"
-            value={phoneNumber}
-            onChange={e => setPhoneNumber(e.target.value)}
-          />
-        </div>
-        <div>
+        <div className="profile-btn">
           <button type="submit">Update Profile</button>
         </div>
+        {successMessage && <div className="success-message">{successMessage}</div>}
       </form>
     </div>
   );

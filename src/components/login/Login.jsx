@@ -9,19 +9,14 @@ const LoginPage = () => {
 
   const handleLogin = e => {
     e.preventDefault();
-
-    // Retrieve user data from localStorage
     const userData = localStorage.getItem('userData');
 
     if (!userData) {
       setError('No user data found');
       return;
     }
-
-    // Parse the stored JSON string into a JavaScript object
     const userDataObj = JSON.parse(userData);
 
-    // Find the user with matching email and password
     const user = userDataObj.users.find(
       u => u.email === email && u.password === password,
     );
@@ -33,8 +28,6 @@ const LoginPage = () => {
       setError('Invalid email or password');
       return;
     }
-
-    // Redirect to the home page or perform any other necessary actions
     window.location.href = '/home';
   };
 

@@ -1,6 +1,7 @@
 import React from 'react';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faFacebookF, faTwitter, faInstagram, faPinterest, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { SocialIcon } from 'react-social-icons';
 import './footer.css';
 
 const Footer = () => {
@@ -39,7 +40,11 @@ const Footer = () => {
         </div>
         <div className="footer-section">
           <h3>Stay Connected</h3>
-         
+         <ul>
+         <li><SocialIcon url="https://twitter.com/jahirrakib" /></li>
+         <li><SocialIcon url="https://facebook.com/jahir.rakib.3" /></li>
+         <li><SocialIcon url="https://youtube.com/@jahirrakib4071" /></li>
+         </ul>
         </div>
       </div>
       <div className="footer-bottom">

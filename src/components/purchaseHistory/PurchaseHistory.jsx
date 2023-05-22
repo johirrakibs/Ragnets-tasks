@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './purchaseHistory.css';
 import Header from './../../common/header/Header';
 import Navbar from './../../common/navbar/Navbar';
+import Footer from '../../common/footer/Footer';
 
 
 const PurchaseHistory = () => {
@@ -15,8 +16,8 @@ const PurchaseHistory = () => {
 
   return (
     <>
-     <Header />
-     <Navbar />
+      <Header />
+      <Navbar />
       <div className='cart-header-title-div'>
         <h2 className='cart-header'>Purchase History</h2>
       </div>
@@ -47,6 +48,7 @@ const PurchaseHistory = () => {
           )}
         </div>
       </div>
+      <Footer />
     </>
   );
 };
