@@ -28,7 +28,7 @@ const LoginPage = () => {
       setError('Invalid email or password');
       return;
     }
-    // window.location.href = '/home';
+    window.location.href = 'https://ragnets-tasks.vercel.app/home';
   };
 
   return (

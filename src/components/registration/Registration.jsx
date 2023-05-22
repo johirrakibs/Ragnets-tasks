@@ -30,7 +30,7 @@ const RegistrationPage = () => {
 
     localStorage.setItem('userData', JSON.stringify(userDataObj));
 
-    // window.location.href = '/login';
+    window.location.href = 'https://ragnets-tasks.vercel.app/login';
   };
 
   return (
