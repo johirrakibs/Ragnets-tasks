@@ -28,7 +28,7 @@ const LoginPage = () => {
       setError('Invalid email or password');
       return;
     }
-    window.location.href = '/home';
+    // window.location.href = '/home';
   };
 
   return (
