@@ -64,7 +64,7 @@ const Header = () => {
             <FontAwesomeIcon icon={faUserPlus} />
             <span>Login</span>
           </Link>
-          <Link to='/logout' className='header-icon'>
+          <Link to='/login' className='header-icon'>
             <FontAwesomeIcon icon={faUserMinus} />
             <span>Log Out</span>
           </Link>

@@ -53,7 +53,7 @@ const LoginPage = () => {
             />
           </div>
           <div className='btn-login'>
-           <Link  to="/home"> <button type='submit' className='login-btn'>
+           <Link  to="/home" className='login-btn'> <button type='submit' className='login-btn'>
            Login
          </button></Link>
           </div>
