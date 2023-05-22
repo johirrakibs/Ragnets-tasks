@@ -24,10 +24,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2px;
   }
   
   .search-input {
-    width: 500px;
+    width: 32vw;
     padding: 8px;
     border: none;
     border-radius: 20px;
@@ -75,3 +76,53 @@
     color: #e42a09;
   }
   
+
+
+  @media (min-width:300px) and (max-width:767px){
+
+    .header {
+      background-color: #f8f8f8;
+      margin-top: -9px !important;
+      /* margin-left: -8px !important; */
+  }
+  .header-container {
+flex-direction: column;
+  }
+  .search-input {
+    width: 60vw;
+  }
+
+  .header-icons{
+   padding: 21px 35px 21px 0;
+
+  }
+
+  .header-icon span {
+    font-size: 12px;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.nav {
+  display: none;
+}
+
+
+.details-btn {
+color: #fff;
+}
+
+
+.footer-container {
+  display: grid !important;
+  grid-template-columns: repeat(2,1fr);
+  margin-left: 8% !important;
+}
+
+
+
+
+
+
+  }
+
