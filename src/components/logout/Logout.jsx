@@ -1,11 +1,13 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const LogoutPage = () => {
     useEffect(() => {
-        window.location.href = 'https://ragnets-tasks.vercel.app/login';
+        // window.location.href = '/login';
+
     }, []);
 
-    return <div>Logging out...</div>;
+    return <div><Link to="/login">LogOut</Link></div>;
 };
 
 export default LogoutPage;

@@ -28,7 +28,7 @@ const LoginPage = () => {
       setError('Invalid email or password');
       return;
     }
-    window.location.href = 'https://ragnets-tasks.vercel.app/home';
+    // window.location.href = '/home';
   };
 
   return (
@@ -53,9 +53,9 @@ const LoginPage = () => {
             />
           </div>
           <div className='btn-login'>
-            <button type='submit' className='login-btn'>
-              Login
-            </button>
+           <Link  to="/home"> <button type='submit' className='login-btn'>
+           Login
+         </button></Link>
           </div>
           <div><p className='login-new-member'>New member? <span><Link to="/registration">Register</Link></span> here.</p></div>
           {error && <div>{error}</div>}

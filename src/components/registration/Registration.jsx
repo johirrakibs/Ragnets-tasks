@@ -30,7 +30,7 @@ const RegistrationPage = () => {
 
     localStorage.setItem('userData', JSON.stringify(userDataObj));
 
-    window.location.href = 'https://ragnets-tasks.vercel.app/login';
+    // window.location.href = '/login';
   };
 
   return (
@@ -53,7 +53,7 @@ const RegistrationPage = () => {
               <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
             <div className='btn-reg'>
-              <button type="submit" className='reg-btn'>Register</button>
+              <Link to="/login"><button type="submit" className='reg-btn'>Register</button></Link>
             </div>
           </div>
           {error && <div>{error}</div>}
