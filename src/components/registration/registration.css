@@ -82,3 +82,26 @@
   color: red;
   margin-top: 10px;
 }
+
+
+
+
+
+@media (min-width:300px) and (max-width:767px) {
+
+  .reg-contain {
+
+    width: 96%;
+  }
+
+  .para {
+  /* margin-left: 15px; */
+  text-align: center;
+}
+
+.registration-input {
+  
+  margin: 0 8%;
+}
+
+}

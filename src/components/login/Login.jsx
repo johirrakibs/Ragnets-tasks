@@ -57,7 +57,7 @@ const LoginPage = () => {
               Login
             </button>
           </div>
-          <div><p>New member? <span><Link to="/registration">Register</Link></span> here.</p></div>
+          <div><p className='login-new-member'>New member? <span><Link to="/registration">Register</Link></span> here.</p></div>
           {error && <div>{error}</div>}
         </form>
       </div>

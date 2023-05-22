@@ -80,3 +80,24 @@
   color: red;
   margin-top: 10px;
 }
+
+
+
+
+
+
+
+
+@media (min-width:300px) and (max-width:767px) {
+
+  .login-page {
+
+    width: 93%;
+  }
+
+.login-new-member{
+  margin-left: 15px;
+}
+
+
+}
